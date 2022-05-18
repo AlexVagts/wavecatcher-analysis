@@ -83,7 +83,8 @@ download RootAnalysis directory
 ## For the Directional Reconstruction Analysis
 
 - Create the .root-files in the RootReader; check if POSITIONCUTS & INTEGRALCUTS are set to true and the corresponding value of position is correct
-- There are four options for position, given by the positionOptions, shown in the picture
+- There are four options for position (= 0, 1, 2, 3), given by the positionOptions, shown in the picture
+- There are three different settings of the plastic scintillators (= R, L, C), also shown in the picture
 ![positioncuts](positioncuts.png)
 - position = 3 means no cut applied
 - run couplingCorrection.C to produce couplingCorrection.txt
