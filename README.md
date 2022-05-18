@@ -1,5 +1,5 @@
 - install rootreader as follows, but with src files in this repository
-- download RootAnalysis-upload, rename to RootAnalysis
+- download RootAnalysis-upload from https://github.com/andi-matter/bachelor/tree/andrea, rename to RootAnalysis
 - make folder called 'finishedRootfiles' in RootAnalysis directory
 - follow tutorials on https://github.com/Uni2K/RootReader/wiki/Introduction
 - if something goes wrong: often it's because a hard-coded file location/directory has to be adjusted to your computer. Locations for these are the analysisPath.txt, and in the RootAnalysis directory several files under integralAnalysis. Check the locations hard-coded in there, and adjust so that the directories match your setup.
@@ -59,13 +59,15 @@ Support: *jan4995@gmail.com*
 - Test Data (Testbeam 2019, Electrons): https://box.hu-berlin.de/d/7015628060ab4c849635/
 - Test Data (Dark Count 2019): https://box.hu-berlin.de/d/fc77616a4b244451a539/
 - Test Data (Calibration, 2019): https://box.hu-berlin.de/d/b23d6d3d342a4f4a8fea/
+- Data for directional reconstruction by Andrea: https://box.hu-berlin.de/d/47ab56646cc745819549/
 
-Master theses:
+Theses:
 
 - J. Zimmermann: https://box.hu-berlin.de/f/6322f49e9ea64c0994ac/
 - M. Ehlert: https://box.hu-berlin.de/f/13c3c7ea8b26410a8509/
 - J. Schliwinski: https://box.hu-berlin.de/f/133a19bd032d4bc2825c/
 - L. Shihora: https://box.hu-berlin.de/f/62bfe4bbc3234617ac59/
+- A. Ernst: https://box.hu-berlin.de/d/47ab56646cc745819549/files/?p=%2FBA_ernst_final_nomar.pdf
 
 
 
@@ -77,3 +79,13 @@ download RootAnalysis directory
 !!! Actually just use RootAnalysis folder in this repo !!!
 
 [ https://github.com/Uni2K/RootAnalysis ]
+
+## For the Directional Reconstruction Analysis
+
+- Create the .root-files in the RootReader; check if POSITIONCUTS & INTEGRALCUTS are set to true and the corresponding value of position is correct
+- There are four options for position, given by the positionOptions, shown in the picture
+![positioncuts](positioncuts.png)
+- position = 3 means no cut applied
+- run couplingCorrection.C to produce couplingCorrection.txt
+- run makeIntegralsPDF.sh
+- to create plots, evaluate the Results.nb, make sure that all files have been copied correctly
